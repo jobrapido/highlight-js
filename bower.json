@@ -2,6 +2,9 @@
   "name": "jr-highlight.js",
   "version": "0.0.1",
   "main": "jr-highlight.js",
+  "dependencies": {
+    "jquery": "~1.9.1"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
