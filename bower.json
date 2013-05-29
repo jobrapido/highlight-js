@@ -1,0 +1,10 @@
+{
+  "name": "jr-highlight.js",
+  "version": "0.0.1",
+  "main": "jr-highlight.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
