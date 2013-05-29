@@ -1,5 +1,5 @@
 {
-  "name": "jr-highlight",
+  "name": "jr-highlight.js",
   "version": "0.0.1",
   "description": "grunt tasks to build and validate the jquery plugin",
   "main": "jr-highlight.js",
