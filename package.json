@@ -1,0 +1,14 @@
+{
+  "name": "jr-highlight",
+  "version": "0.0.1",
+  "description": "grunt tasks to build and validate the jquery plugin",
+  "main": "jr-highlight.js",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.5.4",
+    "grunt-contrib-uglify": "~0.2.1"
+  },
+  "author": "Jobrapido",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
