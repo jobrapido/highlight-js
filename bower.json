@@ -5,6 +5,10 @@
   "dependencies": {
     "jquery": "~1.9.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jobrapido/jr-highlight.js.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
