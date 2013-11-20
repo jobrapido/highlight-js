@@ -46,7 +46,7 @@ Johann Burkard
 
     function innerHighlight(node, pat, ignore) {
       var skip = 0;
-      if (node.nodeType == 3) {
+      if (node.nodeType === 3) {
         var isPatternArray = $.isArray(pat);
         if (!isPatternArray) {
           pat = [pat];
@@ -54,20 +54,20 @@ Johann Burkard
         var patternCount = pat.length;
         for (var ii = 0; ii < patternCount; ii++) {
           var currentTerm = (ignore ? replaceDiacritics(pat[ii]) : pat[ii]).toUpperCase();
-      var regex = new RegExp(currentTerm + "\\S", "gi");
+      var regex = new RegExp(currentTerm + '\\S', 'gi');
           var pos = (ignore ? replaceDiacritics(node.data) : node.data).toUpperCase().search(regex);
           if (pos >= 0) {
             var spannode = document.createElement('span');
             spannode.className = 'highlight';
             var middlebit = node.splitText(pos);
-            var endbit = middlebit.splitText(currentTerm.length);
+            middlebit.splitText(currentTerm.length);
             var middleclone = middlebit.cloneNode(true);
             spannode.appendChild(middleclone);
             middlebit.parentNode.replaceChild(spannode, middlebit);
             skip = 1;
           }
         }
-      } else if (node.nodeType == 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
+      } else if (node.nodeType === 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
         for (var i = 0; i < node.childNodes.length; ++i) {
           i += innerHighlight(node.childNodes[i], pat, ignore);
         }
@@ -85,7 +85,7 @@ Johann Burkard
   };
 
   $.fn.removeHighlight = function() {
-  return this.find("span.highlight").each(function() {
+  return this.find('span.highlight').each(function() {
     this.parentNode.replaceChild(this.firstChild, this);
     this.parentNode.normalize();
   }).end();
